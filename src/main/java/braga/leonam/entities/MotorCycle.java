@@ -25,6 +25,7 @@ public class MotorCycle extends Vehicle{
 		this.seats = seats;
 	}
 
+	@Override
 	public Double getPrice() {
 		return price;
 	}

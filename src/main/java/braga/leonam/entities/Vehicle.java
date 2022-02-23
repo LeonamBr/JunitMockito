@@ -18,5 +18,7 @@ public abstract class Vehicle {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	protected abstract Double getPrice();
 	
 }

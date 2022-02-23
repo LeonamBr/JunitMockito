@@ -17,6 +17,7 @@ public class Car extends Vehicle {
 		this.seats = seats;
 	}
 
+	@Override
 	public Double getPrice() {
 		return price;
 	}
