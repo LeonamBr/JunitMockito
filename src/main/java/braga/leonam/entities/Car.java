@@ -22,20 +22,26 @@ public class Car extends Vehicle {
 		return price;
 	}
 
+	@Override
 	public void setPrice(Double price) {
 		this.price = price;
 	}
 
+	@Override
 	public Integer getSeats() {
 		return seats;
 	}
 
+	@Override
 	public void setSeats(Integer seats) {
 		this.seats = seats;
 	}
 
-	public Integer getWHEELS() {
+	@Override
+	public Integer getWheels() {
 		return WHEELS;
 	}
+	
+	
 
 }

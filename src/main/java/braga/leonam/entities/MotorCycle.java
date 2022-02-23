@@ -16,11 +16,12 @@ public class MotorCycle extends Vehicle{
 		this.seats = seats;
 		this.price = price;
 	}
-
+	@Override
 	public Integer getSeats() {
 		return seats;
 	}
 
+	@Override
 	public void setSeats(Integer seats) {
 		this.seats = seats;
 	}
@@ -29,12 +30,13 @@ public class MotorCycle extends Vehicle{
 	public Double getPrice() {
 		return price;
 	}
-
+	@Override
 	public void setPrice(Double price) {
 		this.price = price;
 	}
 
-	public Integer getWHEELS() {
+	@Override
+	public Integer getWheels() {
 		return WHEELS;
 	}
 
