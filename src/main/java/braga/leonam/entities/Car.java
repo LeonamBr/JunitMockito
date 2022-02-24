@@ -41,7 +41,5 @@ public class Car extends Vehicle {
 	public Integer getWheels() {
 		return WHEELS;
 	}
-	
-	
 
 }

@@ -77,4 +77,20 @@ public class VehicleRent {
 				&& Objects.equals(returnDate, other.returnDate) && Objects.equals(vehicle, other.vehicle);
 	}
 	
+	protected boolean isInstanceOfCar(Vehicle obj) {
+		if (obj instanceof Car)
+			return true;
+		else
+			return false;
+	}
+	
+	protected boolean isInstanceOfMotorCycle(Vehicle obj) {
+		if (obj instanceof MotorCycle)
+			return true;
+		else
+			return false;
+	}
+
+
+	
 }

@@ -1,13 +1,13 @@
 package braga.leonam.entities;
 
-public class MotorCycle extends Vehicle{
-	
+public class MotorCycle extends Vehicle {
+
 	private final Integer WHEELS = 2;
-	
+
 	private Integer seats;
-	
+
 	private Double price;
-	
+
 	public MotorCycle() {
 	}
 
@@ -16,6 +16,7 @@ public class MotorCycle extends Vehicle{
 		this.seats = seats;
 		this.price = price;
 	}
+
 	@Override
 	public Integer getSeats() {
 		return seats;
@@ -30,6 +31,7 @@ public class MotorCycle extends Vehicle{
 	public Double getPrice() {
 		return price;
 	}
+
 	@Override
 	public void setPrice(Double price) {
 		this.price = price;
@@ -39,5 +41,6 @@ public class MotorCycle extends Vehicle{
 	public Integer getWheels() {
 		return WHEELS;
 	}
+
 
 }

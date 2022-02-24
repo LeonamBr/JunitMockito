@@ -47,5 +47,7 @@ public abstract class Vehicle {
 		Vehicle other = (Vehicle) obj;
 		return Objects.equals(name, other.name);
 	}
+
+	
 	
 }
