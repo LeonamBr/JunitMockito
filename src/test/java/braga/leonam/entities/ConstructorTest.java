@@ -6,6 +6,12 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import braga.leonam.builders.CarBuilder;
+import braga.leonam.builders.CarRentBuilder;
+import braga.leonam.builders.ClientBuilder;
+import braga.leonam.builders.MotorCycleBuilder;
+import braga.leonam.builders.MotorCycleRentBuilder;
+
 public class ConstructorTest {
 
 	private Vehicle car;
@@ -18,11 +24,11 @@ public class ConstructorTest {
 
 	@Before
 	public void setup() {
-		car = new Car("Corola", 250.00, 5);
-		motorCycle = new MotorCycle("Fazer", 2, 150.00);
-		client = new Client("Leonam Braga", 33, Instant.parse("1989-12-01T00:00:00Z"));
-		carRent = new VehicleRent(client, car, Instant.now(), Instant.now().plusSeconds(5 * 86400));
-		MCRent = new VehicleRent(client, motorCycle, Instant.now(), Instant.now().plusSeconds(5 * 86400));
+		car = CarBuilder.aCar().now();
+		motorCycle = MotorCycleBuilder.aMotocycle().now();
+		client = ClientBuilder.aClient().now();
+		carRent = CarRentBuilder.aRent().now();
+		MCRent = MotorCycleRentBuilder.aRent().now();
 	}
 
 	@Test

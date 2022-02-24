@@ -1,14 +1,13 @@
 package braga.leonam.services;
 
-import java.time.Instant;
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import braga.leonam.entities.Car;
+import braga.leonam.builders.CarBuilder;
+import braga.leonam.builders.ClientBuilder;
+import braga.leonam.builders.MotorCycleBuilder;
 import braga.leonam.entities.Client;
-import braga.leonam.entities.MotorCycle;
 import braga.leonam.entities.Vehicle;
 import braga.leonam.entities.VehicleRent;
 import braga.leonam.exceptions.IllegalDaysEntryException;
@@ -28,9 +27,9 @@ public class VehicleRentServiceTest {
 
 	@Before
 	public void setup() {
-		car = new Car("Corola", 250.00, 5);
-		motorCycle = new MotorCycle("Fazer", 2, 150.00);
-		client = new Client("Leonam Braga", 33, Instant.parse("1989-12-01T00:00:00Z"));
+		car = CarBuilder.aCar().now();
+		motorCycle = MotorCycleBuilder.aMotocycle().now();
+		client = ClientBuilder.aClient().now();
 		service = new VehicleRentService();
 	}
 
