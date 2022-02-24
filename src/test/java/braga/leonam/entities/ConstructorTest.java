@@ -21,7 +21,7 @@ public class ConstructorTest {
 	private Client client;
 
 	private VehicleRent carRent, MCRent;
-
+	
 	@Before
 	public void setup() {
 		car = CarBuilder.aCar().now();
