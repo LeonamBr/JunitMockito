@@ -112,4 +112,41 @@ public class GettersSetterTest {
 		Assert.assertTrue(client.getBirthDate().equals(Instant.parse("1989-12-01T00:00:00Z")));
 		
 	}
+	
+	@Test
+	public void vehicleRentSetAndGetClient() {
+		
+		rent.setClient(new Client("Leonam Braga", 33, Instant.parse("1989-12-01T00:00:00Z")));
+		
+		Assert.assertTrue(rent.getClient().equals(new Client("Leonam Braga", 33, Instant.parse("1989-12-01T00:00:00Z"))));
+				
+	}
+	
+	@Test
+	public void vehicleRentSetAndGetVehicle() {
+		
+		rent.setVehicle(new Car("Corola", 250.00, 5));
+		
+		Assert.assertTrue(rent.getVehicle().equals(new Car("Corola", 250.00, 5)));
+				
+	}
+	
+	@Test
+	public void vehicleRentSetAndRentDate() {
+		
+		rent.setRentDate(Instant.now());
+		
+		Assert.assertTrue(rent.getRentDate().equals(Instant.now()));
+				
+	}
+	
+	@Test
+	public void vehicleRentSetAndReturnDate() {
+		
+		rent.setReturnDate(Instant.now());
+		
+		Assert.assertTrue(rent.getReturnDate().equals(Instant.now()));
+				
+	}
+	
 }

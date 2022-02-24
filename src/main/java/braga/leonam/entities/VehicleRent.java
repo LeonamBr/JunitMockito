@@ -1,6 +1,7 @@
 package braga.leonam.entities;
 
 import java.time.Instant;
+import java.util.Objects;
 
 public class VehicleRent {
 
@@ -58,4 +59,22 @@ public class VehicleRent {
 		return  (Double.parseDouble((Long.toString(returnDate.toEpochMilli() - rentDate.toEpochMilli())))/(1000*60*60*24))*vehicle.getPrice();
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(client, rentDate, returnDate, vehicle);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		VehicleRent other = (VehicleRent) obj;
+		return Objects.equals(client, other.client) && Objects.equals(rentDate, other.rentDate)
+				&& Objects.equals(returnDate, other.returnDate) && Objects.equals(vehicle, other.vehicle);
+	}
+	
 }
