@@ -3,6 +3,9 @@ package braga.leonam.services;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import braga.leonam.DAO.IRentDAO;
 import braga.leonam.builders.CarBuilder;
@@ -25,13 +28,16 @@ public class VehicleRentServiceTest {
 	private Client client;
 
 	private VehicleRent rent;
-
+	
+	@InjectMocks
 	private VehicleRentService service;
 
+	@Mock
 	private IRentDAO dao;
 
 	@Before
 	public void setup(){
+		MockitoAnnotations.initMocks(this);
 		car = CarBuilder.aCar().now();
 		motorCycle = MotorCycleBuilder.aMotocycle().now();
 		dao = VehicleRentDaoBuilder.aDaoMock().now();
