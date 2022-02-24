@@ -1,5 +1,7 @@
 package braga.leonam.entities;
 
+import java.time.Instant;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -51,5 +53,63 @@ public class GettersSetterTest {
 	public void carGetWheels() {
 				
 		Assert.assertTrue(car.getWheels() == 4);
+	}
+	
+	@Test
+	public void motorCycleSetAndGetName() {
+
+		motorCycle.setName("Honda Tita");
+
+		Assert.assertTrue(motorCycle.getName().equals("Honda Tita"));
+
+	}
+
+	@Test
+	public void motorCycleSetAndGetPrice() {
+
+		motorCycle.setPrice(250.00);
+
+		Assert.assertTrue(motorCycle.getPrice() == 250.00);
+	}
+	
+	@Test
+	public void motorCycleSetAndGetSeats() {
+		
+		motorCycle.setSeats(2);
+		
+		Assert.assertTrue(motorCycle.getSeats() == 2);
+	}
+	
+	@Test
+	public void motorCycleGetWheels() {
+				
+		Assert.assertTrue(motorCycle.getWheels() == 2);
+	}
+	
+	@Test
+	public void clientSetAndGetName() {
+		
+		client.setName("Leonam Braga");
+		
+		Assert.assertTrue(client.getName().equals("Leonam Braga"));
+		
+	}
+	
+	@Test
+	public void clientSetAndGetAge() {
+		
+		client.setAge(33);
+		
+		Assert.assertTrue(client.getAge() == 33);
+		
+	}
+	
+	@Test
+	public void clientSetAndGetBirthDate() {
+		
+		client.setBirthDate(Instant.parse("1989-12-01T00:00:00Z"));
+		
+		Assert.assertTrue(client.getBirthDate().equals(Instant.parse("1989-12-01T00:00:00Z")));
+		
 	}
 }

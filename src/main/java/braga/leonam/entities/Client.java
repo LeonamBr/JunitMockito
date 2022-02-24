@@ -1,6 +1,7 @@
 package braga.leonam.entities;
 
 import java.time.Instant;
+import java.util.Objects;
 
 public class Client {
 	
@@ -42,5 +43,24 @@ public class Client {
 	public void setBirthDate(Instant birthDate) {
 		this.birthDate = birthDate;
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(birthDate, name);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Client other = (Client) obj;
+		return Objects.equals(birthDate, other.birthDate) && Objects.equals(name, other.name);
+	}
+	
+	
 	
 }
